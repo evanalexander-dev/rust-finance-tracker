@@ -10,11 +10,6 @@ use ui::{display_menu, handle_menu_choice, get_user_input};
 fn main() {
     let mut tracker = FinanceTracker::new();  // Mutable variable
 
-    // Try to load existing data on startup
-    if let Err(_) = tracker.load_from_file("finance_data.txt") {
-        println!("No existing data file found. Starting fresh!");
-    }
-
     // Main application loop
     loop {
         display_menu();
